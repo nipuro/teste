@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-    res.send('from test route second')
+    res.send('from test route second changed')
 })
 
 app.listen(port, () => {
