@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
     res.send('hellow changed')
 })
 
+app.get('/test', (req, res) => {
+    res.send('from test route')
+})
+
 app.listen(port, () => {
     console.log('Example app listening ');
 })
