@@ -1,17 +1,14 @@
 const express = require('express')
+const product = require('./src/api/product.js')
 
 const app = express()
 
-const port = 3000
 
-app.get('/', (req, res) => {
-    res.send('hellow changed')
-})
+app.use(express.json({extended: false}))
 
-app.get('/test', (req, res) => {
-    res.send('from test route second changed third')
-})
+app.use("/api/product", product)
 
-app.listen(port, () => {
-    console.log('Example app listening ');
-})
+const PORT = 8080
+
+app.listen(PORT,() => console.log(`Server is running in port ${PORT}`))
+
